@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/mac/Desktop/End_to_End_MLPipeline/END_TO_END_ML_PROJECT_1/mlruns/0/09b83721bc8344d48d7cbd74f73540f2/artifacts
+end_time: 1736536985772
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 09b83721bc8344d48d7cbd74f73540f2
+run_name: adaptable-toad-953
+run_uuid: 09b83721bc8344d48d7cbd74f73540f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736536964997
+status: 3
+tags: []
+user_id: mac

@@ -1,6 +1,6 @@
 from src.end_to_end_ML_project_1.constants import *
-from src.end_to_end_ML_project_1.utils.common import read_yaml, create_directories
-from src.end_to_end_ML_project_1.entity.config_entity import (DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig)
+from src.end_to_end_ML_project_1.utils.common import read_yaml, create_directories,save_json
+from src.end_to_end_ML_project_1.entity.config_entity import (DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig,ModelEvaluationConfig)
 
 
 class ConfigurationManager:
@@ -57,7 +57,7 @@ class ConfigurationManager:
         params=self.params.ElasticNet
         schema=self.schema.TARGET_COLUMN
 
-        create_directories([self.config.artifacts_root])
+        create_directories([config.root_dir])
 
         model_trainer_config = ModelTrainerConfig(
             root_dir = config.root_dir,
@@ -69,3 +69,23 @@ class ConfigurationManager:
             target_column=schema.name
         )
         return model_trainer_config
+    
+   
+    ## Perform the Model Evaluation
+    def get_model_evaluation_config(self)-> ModelEvaluationConfig:
+        config=self.config.model_evaluation
+        params=self.params.ElasticNet
+        schema=self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config=ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_data_path=config.test_data_path,
+            model_path=config.model_path,
+            all_params=params,
+            metric_file_name=config.metric_file_name,
+            target_column=schema.name,
+            mlflow_uri= 'https://dagshub.com/OluomaOji/END_TO_END_ML_PROJECT_1.mlflow'
+        )
+        return model_evaluation_config

@@ -1,12 +1,12 @@
-### END TO END MACHINE LEARNING PROJECt
+### END TO END MACHINE LEARNING PROJECT
 
 ## WORKFLOWS- ML PIPELINE
 
-1. Data Inegestion
+1. Data Ingestion
 2. Data Validation
-2. Data Transformation
+2. Data Transformation - Feature Engineering, Data Preprocessing
 3. Model Trainer
-4. Model Evaluation
+4. Model Evaluation - Mlflow, Dagshub
 
 ## Workflows
 

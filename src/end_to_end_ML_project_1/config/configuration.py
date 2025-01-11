@@ -1,6 +1,10 @@
 from src.end_to_end_ML_project_1.constants import *
 from src.end_to_end_ML_project_1.utils.common import read_yaml, create_directories,save_json
-from src.end_to_end_ML_project_1.entity.config_entity import (DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig,ModelEvaluationConfig)
+from src.end_to_end_ML_project_1.entity.config_entity import (DataIngestionConfig, 
+                                                              DataValidationConfig,
+                                                                DataTransformationConfig, 
+                                                                ModelTrainerConfig,
+                                                                ModelEvaluationConfig)
 
 
 class ConfigurationManager:
